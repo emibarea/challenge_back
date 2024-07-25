@@ -5,7 +5,7 @@ const getUser = async (req, res) => {
     const { username, name, email } = req.user;
     res.json({ username, name, email });
   } catch (err) {
-    res.status(400).json({ error: err.message });
+    res.status(400).json({ message: err.message });
   }
 };
 
@@ -36,7 +36,7 @@ const updateUser = async (req, res) => {
 
     res.json({ username: updatedUser.username, email: updatedUser.email, name: updatedUser.name });
   } catch (err) {
-    res.status(400).json({ error: err.message });
+    res.status(400).json({ message: err.message });
   }
 };
 

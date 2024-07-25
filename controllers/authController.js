@@ -32,7 +32,7 @@ const register = async (req, res) => {
     res.status(201).json({ success: true, message: 'Usuario registrado exitosamente' });
   } catch (error) {
     console.error('Error en el registro', error);
-    res.status(500).json({ success: false, message: 'Error en el servidor. Por favor, inténtelo de nuevo.' });
+    res.status(500).json({ message: 'Error en el servidor. Por favor, inténtelo de nuevo.' });
   }
 };
 
